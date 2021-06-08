@@ -17,6 +17,7 @@ function findNextInt(y)
 	return result;
 }
 
+
 	console.log(findNextInt(226) );
 	console.log(findNextInt(250) );
 	console.log(findNextInt(2000) );

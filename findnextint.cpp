@@ -17,6 +17,7 @@ int findNextInt(int y)
 		if(arr[i] > y && result > arr[i]) //falls y kleiner als arr[i] sein soll, muss auch geprüft werden ob auch result größer als arr[i] ist
 		{
 			result = arr[i];
+			
             foundResult = 1;
 		}
 	}
