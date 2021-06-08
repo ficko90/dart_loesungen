@@ -1,11 +1,28 @@
 #include <iostream>
 using namespace std;
 
+int Max(int array[], int n)
+{
+	int i;
+
+    // Loop to store largest number to arr[0]
+    for(i = 1;i < n; ++i)
+    {
+       // Change < to > if you want to find the smallest element
+       if(array[0] < array[i])
+           array[0] = array[i];
+    }
+
+    return array[0];
+}
+
 int FindNextInt(int y)
 {
-	int arr[6] = { 225, 256, 232, 1036, 532, 224 };
+	int arr[7] = { 225, 256, 232, 1036, 532, 224, 10006 };
 	int length = sizeof(arr) / sizeof(arr[0]);
-	int result = 9999;
+	int max = Max(arr, length);
+	max++;
+	int result = max;
 
 	for(int i = 0; i < length; i++) //durch kompletten Array laufen
 	{
@@ -15,7 +32,7 @@ int FindNextInt(int y)
 		}
 	}
 
-	if(result == 9999)
+	if(result == max)
 	{
 		result = 0;
 	}
